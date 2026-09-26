@@ -2,7 +2,7 @@
 
 Status:
 
-Tags: [[Fundamentals of Machine Learning]]
+Tags: [[Foundation of Machine Learning]]
 
 
 # Introduction

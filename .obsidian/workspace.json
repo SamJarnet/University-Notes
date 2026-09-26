@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Fundamentals of Machine Learning/Introduction.md",
+                "file": "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction"
+              "title": "Embedded Architectures"
             }
           }
         ]
@@ -168,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,13 +184,28 @@
   },
   "active": "3a239ccb47c5c1ce",
   "lastOpenFiles": [
-    "Pasted image 20260923205530.png",
-    "3 - Tags/Year 3/Fundamentals of Machine Learning.md",
-    "6 - Full Notes/Fundamentals of Machine Learning/Introduction.md",
+    "2 - Source Material/Pasted image 20260925153910.png",
+    "2 - Source Material/Pasted image 20260925153223.png",
+    "2 - Source Material/Pasted image 20260925152931.png",
+    "2 - Source Material/Pasted image 20260925152828.png",
+    "2 - Source Material/Pasted image 20260925152444.png",
+    "2 - Source Material/Pasted image 20260925152017.png",
+    "2 - Source Material/Pasted image 20260925151739.png",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
+    "2 - Source Material/Pasted image 20260925150838.png",
+    "2 - Source Material/Pasted image 20260925150805.png",
+    "2 - Source Material/Pasted image 20260925150228.png",
+    "2 - Source Material/Pasted image 20260925145902.png",
+    "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
+    "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "3 - Tags/Year 3/Foundation of Machine Learning.md",
+    "3 - Tags/Year 3/Real-Time Computing and Embedded Systems.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems",
     "3 - Tags/Year 3",
     "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
     "6 - Full Notes/Fundamentals of Machine Learning/Untitled",
-    "6 - Full Notes/Fundamentals of Machine Learning",
+    "6 - Full Notes/Foundation of Machine Learning",
     "Part III Individual Project/Panayiotis Danassis.md",
     "Part III Individual Project/Favourite people.md",
     "6 - Full Notes/Computer Systems II/FAT File System(s).md",
@@ -209,27 +224,12 @@
     "Part III Individual Project/Asieh Salehi Fathabadi.md",
     "Part III Individual Project/Anderson Ang.md",
     "Part III Individual Project/Nguyen Tan Viet Tuyen.md",
-    "Part III Individual Project/Dr Muhammad Burhan Hafez.md",
-    "Part III Individual Project/Timothy Norman.md",
-    "Part III Individual Project/Vahid Yazdanpanah.md",
-    "6 - Full Notes/Computer Systems II/Watchdogs.md",
     "Untitled.canvas",
-    "2 - Source Material/Pasted image 20260518112118.png",
-    "2 - Source Material/Pasted image 20260517203342.png",
-    "2 - Source Material/Pasted image 20260517202610.png",
-    "2 - Source Material/Pasted image 20260517202250.png",
-    "2 - Source Material/Pasted image 20260517201945.png",
-    "2 - Source Material/Pasted image 20260517201646.png",
-    "2 - Source Material/Pasted image 20260517201645.png",
-    "2 - Source Material/Pasted image 20260517183137.png",
-    "2 - Source Material/Pasted image 20260517174409.png",
-    "2 - Source Material/Pasted image 20260517173827.png",
     "6 - Full Notes/Part III Individual Project",
     "6 - Full Notes/Formal Verification And Specification/Untitled",
     "Untitled.base",
     "6 - Full Notes/Untitled 1",
     "6 - Full Notes/Programming Language Concepts",
-    "6 - Full Notes/Formal Verification And Specification",
-    "6 - Full Notes/Computer Systems II"
+    "6 - Full Notes/Formal Verification And Specification"
   ]
 }
