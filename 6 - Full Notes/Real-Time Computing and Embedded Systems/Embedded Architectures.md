@@ -107,5 +107,162 @@ Tags: [[Real-Time Computing and Embedded Systems]]
 	- Tightly optimised OSs, or no OS
 	- Precisely known work-load: 
 
+#### Specialisation of embedded processors and OSs 
+- General Purpose System:
+	- OS:
+		- Complex and general purpose
+		- Set of tasks discovered at run-time
+		- Tasks scheduled by CPU availability
+	- Processor Architecture:
+		- Optimised for performance
+		- Extensive use of caching
+	- Input/output & peripherals
+		- Optimised for throughput
+		- General purpose IO buses
+		- Plug and play for any device
+- Embedded System:
+	- OS:
+		- Minimal or non-existent
+		- Set of tasks fixed at design time
+		- Task scheduled by task deadline
+	- Processor Architecutre:
+		- Optimised for predictability
+		- Limited use of caching
+	- Input/Output & Peripherals
+		- Optimised for latency
+		- Multiple specialised buses
+		- Hard-wired connections to devices
+
+#### Embedded Computer System
+- CPU:
+	- Model of a simple CPU:
+		![[Pasted image 20260929100705.png]]
+		- About right for an in-order CPU
+		- Way too simple for out-of-order
+	- Instructions move through sequentially:
+		- Fetched from the instruction memory
+		- Calculations done in the ALU
+		- Retired by writing back to registers or memory
+	- So where is the jitter/unpredictability?
+
+- More realistic CPU
+	- Model:
+		![[Pasted image 20260929101006.png]]
+	- Data reads and writes serve two purposes
+		- Data: reading and writing stack, heap, ...
+		- IO: interacting with external devices
+	- Data reads and writes are often cached
+		- Memory is much slower than the CPU
+		- Most data is reused, so cache it locally
+	- Instruction fetches are often cached
+		- We need to fetch an instruction every cycle
+		- Most instruction are reused, so cache locally
+	- We want to run parallel instructions
+		- Need to schedule them at run-time
+	- Many sources of jitter = noise distribution
+		![[Pasted image 20260929101238.png]]
+		- Some are independent 
+		- Some are predictably correlated 
+		- Some are unpredictably correlated
+		- Many are very long tailed distributions
+	- A good example is caching
+
+#### Abstracted and Compacted Control Loop
+- ![[Pasted image 20260929101519.png]]
+- ![[Pasted image 20260929101532.png]]
+
+#### Compact control loop with:
+- Normal and Critical Actions:
+	![[Pasted image 20260929101817.png]]
+- Combined Action and Pinning:
+	![[Pasted image 20260929101741.png]]
+	- Must pin so that you don't get a cache miss
+	- Don't overpin or theres no point in a cache
+
+#### Caches are bad for jitter
+- Caches are all about average case performance
+	- They are extremely effective for that
+	- They are used everywhere
+- High performance processors have caches everywhere
+	- Memory caches, Instruction caches (common in embedded too)
+	- Decoded instruction caches
+	- Branch prediction caches
+- General purpose OSs add virtual memory
+	- Virtual memory pages get mapped to physical pages
+	- Any user memory access may require a disk read or page decompression
+	- Processor also requires a cache of virtual->physical mappings
+
+#### CPU to IO: Windows / x86 vs Arduino
+- Windows/x86:
+	- Hardware:
+		- CPU -> PCI Express -> USB Hub -> USB -> UART
+	- Software / APIs:
+		- User-code -> Library -> Kernel-code -> USB Device driver -> PCIe Device Driver
+	- All sources of jitter
+- Arduino:
+	- Hardware:
+		- CPU -> UART
+	- Software/APIs:
+		- User-Code -> Library UART; or
+		- User-code -> UART
+
+#### What is IO?
+- From a software POV: how does code access it?
+- From a hardware POV: what is the physical transport?
+- Transaction POV: when does IO begin and end?
+- Abstraction: what is the conceptual model?
+
+#### IO as a channel
+- One of the most common IO abstractions is a channel or stream
+	- Output: a channel that you can write a sequence of data into
+	- Input: a channel that you can read a sequence of data from
+- Examples of IO as a channel:
+	- stdin/stdout: stdout, print ...
+	- Files: model storage as a stream of bytes
+	- TCP: a reliable channel that can transport data
+	- Streaming buses: AXI streams or Avalon streams
+
+#### IO as a mapping
+ - Another common IO abstractions is a dictionary or mapping
+	- Output: read the value associated with a key
+	- Input: change a value associated with a key
+- Examples of IO as a mapping:
+	- RAM: key=address, value=word
+	- Files: key=offset, value=byte
+	- Directories: key=path, value=byte stream
+	- Real-time DB: key=object id, value= latest measurement
+
+#### IO at the CPU boundaries: channel or mapping?
+- Embedded CPUs need to connect to multiple types of IO functions
+	- Channels: audio data, pixel streams
+	- Mappings: LEDs, switches, any sampling sensor
+- Embedded CPUs have multiple types of underlying physical connection
+	- Channels: SPI, UART, USART, AXI-Stream
+	- Mappings: Address bus, AXI-MM, I$^2$C, GPIO
+- The physical connection may not resemble the IO function
+	- Audio devices may be memory mapped
+	- Switches may be accessed over SPI
+
+#### IO Performance: channel or mapping?
+- We have two big performance metrics
+	- Throughput: number of transaction per second
+	- Latency: time to complete any one transaction
+- In the context of IO these are:
+	- Bandwidth: number of samples read or written per second
+	- Access time: time to complete a single read or write
+- Bandwidth is usually in competition with access time
+	- To improve bandwidth we add buffering and pipelining 
+	- To reduce access-time we remove intermediate buffers
+
+#### Serial/Parallel Communication
+- Cost and size matter too
+- In parallel communication all the bits in a digital word are transmitted at the same time 
+	- For a 32-bit word you need 32 wires
+	- This present scalability and cost issues 
+- In serial communication you send one bit at a time
+	- Need fewer wires 
+	- Timing closure is simpler 
+	- Must include parallel <-> serial shift registers
+
 
 # References

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
+                "file": "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Embedded Architectures"
+              "title": "MLE & Linear Regression"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 386.5
+    "width": 386.5,
+    "collapsed": true
   },
   "right": {
     "id": "d9ba28a126a9fc24",
@@ -184,21 +185,21 @@
   },
   "active": "3a239ccb47c5c1ce",
   "lastOpenFiles": [
-    "2 - Source Material/Pasted image 20260925153910.png",
-    "2 - Source Material/Pasted image 20260925153223.png",
-    "2 - Source Material/Pasted image 20260925152931.png",
-    "2 - Source Material/Pasted image 20260925152828.png",
-    "2 - Source Material/Pasted image 20260925152444.png",
-    "2 - Source Material/Pasted image 20260925152017.png",
-    "2 - Source Material/Pasted image 20260925151739.png",
-    "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
     "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
-    "2 - Source Material/Pasted image 20260925150838.png",
-    "2 - Source Material/Pasted image 20260925150805.png",
-    "2 - Source Material/Pasted image 20260925150228.png",
-    "2 - Source Material/Pasted image 20260925145902.png",
+    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
     "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "2 - Source Material/Pasted image 20260929101817.png",
+    "2 - Source Material/Pasted image 20260929101741.png",
+    "2 - Source Material/Pasted image 20260929101728.png",
+    "2 - Source Material/Pasted image 20260929101640.png",
+    "2 - Source Material/Pasted image 20260929101532.png",
+    "2 - Source Material/Pasted image 20260929101519.png",
+    "2 - Source Material/Pasted image 20260929101238.png",
+    "2 - Source Material/Pasted image 20260929101006.png",
+    "2 - Source Material/Pasted image 20260929100705.png",
+    "2 - Source Material/Pasted image 20260925153910.png",
     "3 - Tags/Year 3/Foundation of Machine Learning.md",
     "3 - Tags/Year 3/Real-Time Computing and Embedded Systems.md",
     "6 - Full Notes/Real-Time Computing and Embedded Systems",
