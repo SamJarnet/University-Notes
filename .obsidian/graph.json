@@ -69,6 +69,27 @@
         "a": 1,
         "rgb": 11621088
       }
+    },
+    {
+      "query": "section:(Embedded)",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "section:(Computer Vision)",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "section:(Foundation)",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
     }
   ],
   "collapse-display": true,
@@ -81,6 +102,6 @@
   "repelStrength": 11.8947368421053,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.950579824954136,
-  "close": false
+  "scale": 0.40247948078064233,
+  "close": true
 }
