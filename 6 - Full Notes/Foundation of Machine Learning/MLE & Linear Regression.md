@@ -16,7 +16,199 @@ Tags: [[Foundation of Machine Learning]] [[Basic Maths]]
 - How do we choose the best parameters $\theta$ to explain the data we saw.
 
 #### THe principle of maximum likelihood estimation (MLE)
-- The MLE Princ
+- The MLE Principle 
+	- Find the parametes $\theta$ that make the observed data $D$ most probable.
+		- We define the likelihoood of the parameters $\theta$ as the probability of the data given those parameters:
+			- $L(θ; D) = p(D|θ).$
+		- If the data points $D = \{x_1, . . . , x_N\}$ are independent and identically distributed, the likelihood is the product of individual probabilities:
+			![[Pasted image 20261001170111.png]]
+		- Our goal is to find the pararamters that mamimise this function:
+			![[Pasted image 20261001170131.png]]
 
+#### The Log-Likelihood trick
+- Working with products is hard (derivatives are messy and the produt of small probabilities can lead to numnerical underflow)
+	- Solution: Maximise the log-likelihood instead. Since log is a monotonically increasing function, this doesn't change where the maximum occurs
+- Log-Likelihood (LL):
+	![[Pasted image 20261001173404.png]]
+- This turns the difficult product into a more friendly sum. We find the MLE by solving:
+	![[Pasted image 20261001173434.png]]
+- This is typically done by setting the derivate $\frac{dL}{d\theta}$ to zero or gradient descent.
 
-# References
+#### Example 1: The Biased Coin (Bernoulli MLE)
+- Problem: We toss a coin $N$ times. Let $N_H$ be the number of heads and $N_T$ be the number of tails. Let $\phi$ be the unkown probability of heads. Find the MLE for $\phi$.
+	- The likelihood of a single toss is $p(x|\phi) = \phi^x(1-\phi)^{1-x}$ where $x=1$ for heads, $x=0$ for tails
+	- The likelihood of the entire sequence of tosses is:
+		![[Pasted image 20261001173900.png]]
+	- The log likelihood is:
+		![[Pasted image 20261001173905.png]]
+	- Take the derivative with respect to $\phi$ and set to 0:
+		![[Pasted image 20261001173939.png]]
+	- Solution:
+		![[Pasted image 20261001173950.png]]
+	- The MLE result is exactly what our intuation tells us
+
+#### Example 2: MLE for Univariate Gaussian
+- Problem: Suppose we have independant and identically distributed data $D= \{x_1, ... , x_N\}$ drawn from a Gaussian distribution $N(\mu, \sigma^2)$. Our parameters are $\theta = (\mu, \sigma^2)$. Find the MLE for $\mu$ and $\sigma^2$ 
+	- The PDF for a single data point is:
+		![[Pasted image 20261001175156.png]]
+	- The log likelihood for the entire dataset is:
+		![[Pasted image 20261001175254.png]]
+	- Now we find the parameters that maximise this function
+	- To find the MLE for $\mu$, we take the partial derivative of the logi-likelihood $L$ with respect to $\mu$ and set it to zero, treating $\sigma^2$ as a constant.
+	- Derivative with respect to $\mu$
+		![[Pasted image 20261001175702.png]]
+	- Set the derivative to zero:
+		![[Pasted image 20261001175804.png]]
+	- Solution for Mean:
+		![[Pasted image 20261001175821.png]]
+	- The MLE for the mean is simply the sample mean
+	- Now we solve for Variance $\sigma^2$
+	- Now we take the partial derivative of $L$ with respect to $\sigma^2$ and set to zero, treating $\mu$ as a constant (we will plug $\hat{\mu_{MLE}}$  later)
+	- Derivative with respect to $\sigma^2$
+		![[Pasted image 20261001180022.png]]
+	- Set derivative to zero and plug in $\hat{\mu_{MLE}}$ for $\mu$ 
+		![[Pasted image 20261001180127.png]]
+	- Solution for Variance:
+		![[Pasted image 20261001180138.png]]
+	- The MLE for the variance is the sample variance
+#### From Statistics to Machine Learning
+- What we have done so far
+	- We used a general principle (MLE) to estimate parameters for simple probability distributions (Bernoulli, Gaussian).
+- The next step
+	- We will now apply the exact same principle to find the parameters of a machine learning model
+	- Model: Linear Regression
+	- Parameters to estimate: The regression weights $w$
+	- Assumptoion: We need a probabilistic model that connects our inputs $x$, outputs $y$ and weights $w$
+
+#### First model: linear regression
+- We assume the output $y$ is a liner function of the inputs $x$, plus Gaussian noise $\epsilon$.
+	![[Pasted image 20261001181321.png]]
+- where the feature vector is $x_i \in \mathbb{R}^D$ and weights are $w \in \mathbb{R}^D$ 
+- The probabilistic view:
+	- We model the noise as being drawn from a zero-mean normal (gaussian) distribution:
+		![[Pasted image 20261001181550.png]]
+	- This implies a conditional probability distribution for $y_i$:
+		![[Pasted image 20261001181610.png]]
+	- This is our model's "probabilistic prediction". The parameters to learn are $\theta = \{w, \sigma^2\}$. 
+	- Let's apply the MLE principle to find the best weights $w$.
+		![[Pasted image 20261001181847.png]]
+	- Look at the $w$ part (we can drop not $w$ terms):
+		![[Pasted image 20261001182837.png]]
+	- Maximising a negative quality is the same as minimising a positive quantity
+	- Equivalent to minimising the residiual sum of squares (RSS) or Squared errors (SSE, MSE)
+		![[Pasted image 20261005214339.png]]
+	- Key Insight: MLE under a Gaussian noise model is equivalent to the least squares. the probablistic view gives us a justification for why we minimise the squared error..
+
+#### Solving for $w$: The Normal Equations
+- Lets solve:
+	![[Pasted image 20261005214454.png]]
+- Matrix Notation:
+	- Let $X$ be the $N \times D$ design or feature matrix, where row $i$ is $x_i^T$. Let $y$ be the $N \times 1$ vector of outputs. Let $w$ be the $D \times 1$ vector of weights. 
+	- The RSS in matrix form is: 
+		![[Pasted image 20261005214610.png]]
+	- To find the minimum, we take the gradient with respect to $w$ and set it to zero:
+		![[Pasted image 20261005214729.png]]
+	- This is known as the normal equations.
+- From the normal equations:
+	![[Pasted image 20261005214921.png]]
+- If the matrix $X^TX$ is invertible, we can solve for $w$:
+	- The Ordinary Least Squared (OLS) Solution
+		![[Pasted image 20261005215107.png]]
+
+#### A Critical Problem of the MLE/OLS Solution
+- This provides a clean, closed form solution if the inverse exists.
+- Problem: When does this solution fail?
+	- The matrix $X^TX$ (a $D\times D$ matrix) is not invertible if:
+		- The features are perfectly correlated. E.g. including height in cm and height in meters as two seperate features. This is called multicollinearity.
+		- The number of features is greater than the number of data points (D > N). The system is undertermined.
+	- Even if not perfectly singular, if features are highly correlated, the matrix is "ill conditioned" , and the solutino becomes numerically unsable (weights can be huge)
+
+#### A fix for Collinearity: Ridge regression
+- Let's add a small, positive value to the diagonal of the matrix we need to invert. This is called "regularising" the matrix.
+	![[Pasted image 20261005215534.png]]
+- $I$ is the $D\times D$ identity matix
+- $\lambda > 0$ is a small positive scaler we choose, called the regularisation strength.
+- For any $\lambda > 0$, the matrix ($X^TX + \lambda I$) is guaranteed to be invertible. 
+- This provides a stable, well behaved solution even when OLS fails.
+
+- This mathematical trick corresponds to changing our objective function to the Ridge Objective Function. The $\hat{W}_{ridge}$ solution is the minimiser of this new objective:
+	![[Pasted image 20261005215904.png]]
+- The core idea of regularisation
+	- We add a penalty term to the objective function to discourage model complexity (e.g. large weights) or incorporate the prior knowledge. 
+		- This encodes a preference for "simpler" models. 
+		- The hyperparameter $\lambda$ controls the trade-off between fitting the data well and keeping the model simple.
+
+#### A Bayesian Perspective: MAP Estimation
+- Bayes' Rule for Parameters:
+	![[Pasted image 20261005220059.png]]
+- The prior $p(w)$ encodes our belives about the parameters before seeing any data.
+- Maximum a Posteriori (MAP) estimation finds the parameters that are most probable after observing the data:
+	![[Pasted image 20261005220245.png]]
+- The only difference from MLE is the addition of the log-prior term, log $p(w)$.
+
+#### MAP is equivalent to regularisation
+- Let's assume a zero-mean Guassian prior on the weights:
+	![[Pasted image 20261005223801.png]]
+- This prior says we believe the weights are likely to be small and centered around 0. 
+- The log prior is:
+	- ![[Pasted image 20261005223907.png]]
+- The MAP objective becomes (minimising the negative log posterior):
+	![[Pasted image 20261005224102.png]]
+- This is exactly the Ridge Regression objective, with $\lambda = \frac{\sigma^2}{\tau^2}$ . L2 regularisation is equivalent to MAP estimation with a Gaussian Prior
+
+#### L1 Regularisation: The Lasso
+- What if we use a different prior? A Laplace prior encourages sparsity.
+- The Lasso (Least Absolute Shrinkage and Selection Operator)
+	- Uses the L1 norm as the penalty: 
+		![[Pasted image 20261005224553.png]]
+		![[Pasted image 20261005224603.png]]
+	- Key Property:
+		- The L1 penalty tends to produce sparse solutions, meaning many weights $w_j$ become exactly zero.
+- This performs automatic feature selection, which is very useful when $D$ is large
+- Corresponds to MAP estimation with a Laplace prior on the weights
+- No closed-form solution due to the non-differentiable $|w_j|$ term at $w_j=0$. requires iterartive optimisation algorithms.
+
+#### Why is Lasso Sparse?
+- The Lasso Objective:
+	![[Pasted image 20261005224844.png]]
+- The L1 penalty encourages many weights $w_j$ to become exactly zero. This is called sparsity.
+- Why does this happen?
+	- The prior interpretation (what L1 corresponds to as a MAP estimate)
+	- The analytical mechanism (soft thresholding)
+	- The geometric interpretation (via constraint regions)
+
+#### Sparsity Explanation 1: MAP with a Laplace Prior
+- Adding a regulariser is MAP estimation under a prior on $w$: Ridge <-> a Gaussian Prior, Lasso <-> a Laplace prior.
+	![[Pasted image 20261005225218.png]]
+- Both have unit variance, so the comparison is fair: the Laplace density is more peaked at zero (0.71 vs 0.40) and heavier tailed past $|w_j| ≈ 2.4$. The log plot is minus the penalty, a parabola for L2, a V with a kink for L1.
+
+#### Sparsity Explanation 2: The Kink at the Origin
+- With an orthonormal design $X^TX = I$ the problem decouples:
+	![[Pasted image 20261005225551.png]]
+- Ridge. 
+	![[Pasted image 20261005225605.png]]
+	- Shrinks, but never exactly zero.
+- Lasso. Soft thresholding (Not required to memorize): 
+	![[Pasted image 20261005225640.png]]#
+	- exactly zero once:
+		![[Pasted image 20261005225655.png]]
+- $\lambda= 2$. The flat segment is the sparsity; it exists only because $| · |$ has a kink at the origin.
+	![[Pasted image 20261005225703.png]]
+
+#### Sparsity Explanation 3: The Geometric View
+- Minimising the regularised objective is equivalent to solving a constrained optimisation problem:
+	![[Pasted image 20261007113823.png]]
+- The goal is to find the point inside the "constraint region" that is closest to the unconstrained OLS solution (the center of the red ellipses).
+- Ridge (L2) Constraint
+	![[Pasted image 20261007113922.png]]
+- Lasso (L1) Constraint
+	![[Pasted image 20261007113944.png]]
+
+#### Geometric Intuition.
+- Left: L1 v.s. L2 regularization; Right: L1 norm ball in 3D
+	![[Pasted image 20261007142800.png]]
+- The solution is the first point where an RSS contour (red ellipse) touches the penalty contour (cyan diamond or green circle). The sharp corners of the L1 diamond make it highly probable that this first point of contact will be on an axis (or very close to it), forcing that weight to become exactly zero or very small.
+
+#### Optimisation
+- The challenge of the L1 Norm
+	- The Lasso objective function is convex, but the absolute value function $|w_j|$ is not differentiable

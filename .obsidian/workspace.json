@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
+                "file": "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basic Maths"
+              "title": "MLE & Linear Regression"
             }
           }
         ]
@@ -42,7 +42,7 @@
               "state": {
                 "sortOrder": "byModifiedTime",
                 "autoReveal": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
@@ -184,26 +184,33 @@
   },
   "active": "685be2075ca38cd2",
   "lastOpenFiles": [
-    "2 - Source Material/Pasted image 20260926130204.png",
-    "2 - Source Material/Pasted image 20260926130052.png",
-    "2 - Source Material/Pasted image 20260926125718.png",
-    "2 - Source Material/Pasted image 20260926125708.png",
-    "2 - Source Material/Pasted image 20260926125014.png",
-    "2 - Source Material/Pasted image 20260926124940.png",
-    "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+    "6 - Full Notes/Foundation of Machine Learning/Labs",
+    "2 - Source Material/Pasted image 20261007142800.png",
+    "2 - Source Material/Pasted image 20261007113944.png",
+    "2 - Source Material/Pasted image 20261007113922.png",
+    "2 - Source Material/Pasted image 20261007113823.png",
+    "2 - Source Material/Pasted image 20261005225703.png",
+    "2 - Source Material/Pasted image 20261005225655.png",
+    "2 - Source Material/Pasted image 20261005225640.png",
+    "2 - Source Material/Pasted image 20261005225605.png",
+    "2 - Source Material/Pasted image 20261005225551.png",
+    "2 - Source Material/Pasted image 20261005225218.png",
+    "6 - Full Notes/Computer Vision/Introduction.md",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
-    "Untitled.base",
+    "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "3 - Tags/Year 3/Computer Vision.md",
     "6 - Full Notes/Programming II Logbook.md",
-    "6 - Full Notes/Fundamentals of Machine Learning/Introduction.md",
+    "6 - Full Notes/Computer Vision",
     "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
+    "5 - Template/Full Note.md",
+    "conflict-files-obsidian-git.md",
+    "Untitled.base",
+    "6 - Full Notes/Fundamentals of Machine Learning/Introduction.md",
     "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
     "6 - Full Notes/Real-Time Computing and Embedded Systems",
     "6 - Full Notes/Foundation of Machine Learning",
-    "2 - Source Material/Pasted image 20260925153910.png",
-    "2 - Source Material/Pasted image 20260925153223.png",
-    "2 - Source Material/Pasted image 20260925152931.png",
-    "2 - Source Material/Pasted image 20260925152828.png",
-    "2 - Source Material/Pasted image 20260925152444.png",
     "3 - Tags/Year 3/Fundamentals of Machine Learning.md",
     "3 - Tags/Year 3",
     "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
@@ -221,15 +228,8 @@
     "3 - Tags/Year 1/Data Management.md",
     "6 - Full Notes/Computer Systems II/Multitasking and RIOS.md",
     "6 - Full Notes/Computer Systems II/Communication for Embedded Systems.md",
-    "6 - Full Notes/Computer Systems II/Memory Mapped IO.md",
-    "6 - Full Notes/Computer Systems II/Real-Time Scheduling.md",
-    "6 - Full Notes/Computer Systems II/Interrupt Handling.md",
-    "Part III Individual Project/Asieh Salehi Fathabadi.md",
-    "Part III Individual Project/Anderson Ang.md",
     "Untitled.canvas",
     "6 - Full Notes/Part III Individual Project",
-    "6 - Full Notes/Formal Verification And Specification/Untitled",
-    "6 - Full Notes/Untitled 1",
-    "6 - Full Notes/Programming Language Concepts"
+    "6 - Full Notes/Formal Verification And Specification/Untitled"
   ]
 }
