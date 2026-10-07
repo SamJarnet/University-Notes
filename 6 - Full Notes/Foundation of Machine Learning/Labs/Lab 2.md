@@ -219,3 +219,31 @@ As long as $w_j^{OLS} \neq 0$, if $\lambda$ gets larger, the denominator gets la
 
 The Laplace prior has a sharper peak at $w=0$, meaning it hs more mass near zero than the Gaussian prior. Explanation 2: the kink at the origin accounts for the exact zeros as it explains the flat zero segment exists because | · |
 has a kink at the origin
+
+### 2.4.1
+On notebook
+
+### 2.4.2
+MSE: 0.08944600906777787, $\max_j |w_j|$ : 2.7119853915820458
+MSE: 0.0016815089359730729, $\max_j |w_j|$ : 3802697.0140057704
+MSE: 0.01897792479648148, $\max_j |w_j|$ : 2.1649529730220944
+We can see that the max coefficient is very large ($3802697.0$) as expected for $M=9$ where $\lambda = 0$  and we can see that when $M=9$ but $\lambda = 0.01$ punishes large coefficients to produce smaller values.
+
+### 2.4.3
+Error:  0.20210495038948528 training set:  1
+Error:  12.173857230566075 training set:  1
+Error:  0.12587359530788228 training set:  1
+Error:  0.21455857112501012 training set:  2
+Error:  5.57322566094771 training set:  2
+Error:  0.09744885917392997 training set:  2
+Error:  0.3046684785482679 training set:  3
+Error:  28.39272166488143 training set:  3
+Error:  0.15544508758373726 training set:  3
+Error:  0.2521415262072968 training set:  4
+Error:  4.209431549759351 training set:  4
+Error:  0.12772228288063295 training set:  4
+Error:  0.391537106486858 training set:  5
+Error:  1798.9163965938155 training set:  5
+Error:  0.1069920067978964 training set:  5
+Medians: [ 0.2521 12.1739  0.1259]
+

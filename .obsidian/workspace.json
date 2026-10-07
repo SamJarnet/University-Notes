@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+                "file": "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MLE & Linear Regression"
+              "title": "Lab 2"
             }
           }
         ]
@@ -184,22 +184,22 @@
   },
   "active": "685be2075ca38cd2",
   "lastOpenFiles": [
-    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
     "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
-    "6 - Full Notes/Foundation of Machine Learning/Labs",
-    "2 - Source Material/Pasted image 20261007142800.png",
-    "2 - Source Material/Pasted image 20261007113944.png",
-    "2 - Source Material/Pasted image 20261007113922.png",
-    "2 - Source Material/Pasted image 20261007113823.png",
-    "2 - Source Material/Pasted image 20261005225703.png",
-    "2 - Source Material/Pasted image 20261005225655.png",
-    "2 - Source Material/Pasted image 20261005225640.png",
-    "2 - Source Material/Pasted image 20261005225605.png",
-    "2 - Source Material/Pasted image 20261005225551.png",
-    "2 - Source Material/Pasted image 20261005225218.png",
-    "6 - Full Notes/Computer Vision/Introduction.md",
+    "2 - Source Material/Pasted image 20261007153752.png",
+    "2 - Source Material/Pasted image 20261007153318.png",
+    "2 - Source Material/Pasted image 20261007152826.png",
+    "2 - Source Material/Pasted image 20261007152808.png",
+    "2 - Source Material/Pasted image 20261007152805.png",
+    "2 - Source Material/Pasted image 20261007152704.png",
+    "2 - Source Material/Pasted image 20261007152638.png",
+    "2 - Source Material/Pasted image 20261007151058.png",
+    "2 - Source Material/Pasted image 20261007150113.png",
+    "2 - Source Material/Pasted image 20261007143957.png",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
     "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+    "6 - Full Notes/Foundation of Machine Learning/Labs",
+    "6 - Full Notes/Computer Vision/Introduction.md",
     "3 - Tags/Year 3/Computer Vision.md",
     "6 - Full Notes/Programming II Logbook.md",
     "6 - Full Notes/Computer Vision",
@@ -227,7 +227,6 @@
     "6 - Full Notes/Data Management/LaTeX.md",
     "3 - Tags/Year 1/Data Management.md",
     "6 - Full Notes/Computer Systems II/Multitasking and RIOS.md",
-    "6 - Full Notes/Computer Systems II/Communication for Embedded Systems.md",
     "Untitled.canvas",
     "6 - Full Notes/Part III Individual Project",
     "6 - Full Notes/Formal Verification And Specification/Untitled"

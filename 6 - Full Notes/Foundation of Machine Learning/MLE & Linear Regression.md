@@ -211,4 +211,91 @@ Tags: [[Foundation of Machine Learning]] [[Basic Maths]]
 
 #### Optimisation
 - The challenge of the L1 Norm
-	- The Lasso objective function is convex, but the absolute value function $|w_j|$ is not differentiable
+	- The Lasso objective function is convex, but the absolute value function $|w_j|$ is not differentiable at $w_j =0$ 
+		![[Pasted image 20261007143957.png]]
+	- This means we cannot use standard gradient descent, because the gradient is undefined where we expect to find the solution. 
+- Solutions
+	- Specialised optimisation algorithms are needed. Common approaches include:
+		- Subgradient methods: Generalise the conceps of a gradient to non-differentiable functions. 
+		- Coordinate Descent: Optimise the objective for one weight $w_j$ at a time, holding all others fixed. This is very efficient for Lasso.
+		- LARS (Least Angle Regression): A less common but historically important algorithm.
+
+#### The Hyperparameter Problem
+- We've introduced a new knob to tune: the regularisation strength $\lambda$.
+- How do we choose the best value for $\lambda$? Or more generally, how do we choose between different models (e.g. Ridge vs Lasso, polynomial degree)?
+	- We want the model that performs best on unseen data
+	- We cannot use the test set to choose $\lambda$. This would be be cheating, the test set would no longer be a fair estimate of generalisation performance.
+- Solution: Create a pretend test set
+	- We split our training data into a new, smaller training set and a validation set.
+
+#### K-Fold Cross-Validation
+- A more robust method than a single split is K-Fold Cross-Validation
+- Algorithm for a single hyperparameter value
+	- 1. Split the training data into K equal-sized folds
+	- 2. For each fold $k=1, ..., K$:
+		- Tread fold $k$ as the validation set
+		- Train the model on the other $K-1$ folds
+		- Compute the error (e.g. MSE) on the validation fold $k$. Let's call this $E_k$ 
+	- 3. The cross-validation score is the average error across all folds:
+		- $E_{CV} = \frac 1 k \sum_{k=1}^K E_k$
+	
+	![[Pasted image 20261007150113.png]]
+
+#### The Full Workflow for Model Selection
+- 1. Initial Split: Split all your data into a Training Set and a final Test Set. Lock the set away.
+- 2. Hyperparameter Tuning Loop (on Training Set):
+	- Define a grid of hyperparameters to try (e.g., $\lambda = \{0.01, 0.1, 1, 10, 100\}$).
+	- For each $\lambda$ in the grid: perform $K$-fold cross-validation and calculate the average validation error $E_{CV}(\lambda)$ 
+- 3. Choose Best Hyperparameter: Select the $\lambda^*$ that resulted in the lowest $E_{CV}$.
+- 4. Final Training: Re-train your model on the entire Training Set using $\lambda^*$.
+- 5. Final Evaluation: Now, for the first and only time, evaluate your final model on the Test Set. This gives you an unbiased estimate of its generalisation performance.
+
+#### Regularisation also Prevents Overfitting
+- We add a penalty term to the objective function $L(w;D) + \lambda R(w)$  to discourage model complexity (e.g. large weights) or incorporate the prior knowledge.
+	- A model that is too complex fits the noise in the training data. 
+	- This encodes a preference for "simpler" models
+	- The hyperparameter $\lambda$ controls the trade-off between fitting the data well and keeping the model simple.
+	![[Pasted image 20261007151058.png]]
+
+#### Polynomial Regression
+- All three panels are polynomial regression: a degree-M polynomial in a scaler-input $x$, 
+	![[Pasted image 20261007152638.png]]
+- with the feature map:
+	![[Pasted image 20261007152704.png]]
+- Still linear in $w$: everything above carries over with $X$ replaced by the design matrix (i.e. handcrafted features) 
+	![[Pasted image 20261007152808.png]]
+- For Ridge regression:
+	![[Pasted image 20261007152826.png]]
+- $M$ is the complexity knob: $M=1$ is the line on the left; a large $M$ can pass close to every noise point, which demands huge, oscillating coefficients $w_j$.
+- That is exactly what $L_2$ or $L_1$ regularisation punish.
+
+#### Bias Variance Tradeoff
+- The fundamental Goal of supervised learning
+	- We want to learn a model $f(x)$ from training data that makes accurate predicitons on new, unseen data. This is the ability to generalise.
+	- The primary obstacle to good generalisation is prediction error.
+	- The core question: 
+		- What are the sources of this error?
+		- Can we break it down to understand it better?
+
+#### Decomposition of Prediction Error
+- The expected prediction error of a model at a point $x$ can be decomposed into three fundamental components.
+- The Error Equation. For a given point $x$, the expected squared error is:
+	![[Pasted image 20261007153318.png]]
+	- $\hat{f}(x)$ is our trained model
+	- $f(x)$ is the true underlying function
+	- $\sigma_{\epsilon}^2$ is the inherent noise variance in the data itself, which we cannot reduce, since $y=f(x) + \epsilon$ 
+- Our goal is to minimise the two controllable sources of error: bias and variance
+
+#### What is bias and variance
+- Intuitive understanding 
+	- Bias is the systematic error of a model. It measuires how far off the average prediction of our model is from the correct value. It's caused by faulty assumptions (e.g. assuming a linear relationship for non-linear data)
+	- Variance is the model's sensitivity to the specific training data. It measures how much the models predictions would change if we trained it on a different training setting.
+- High Bias: The model is consistently wrong in the same direction. It underfits the data. 
+- High Variance: The model fits the random noise in the training data instead of the true signal. It overfits the data.
+	![[Pasted image 20261007153752.png]]
+
+#### The Tradeoff with Model Complexity 
+- Bias and variance are often in opposition to each other.
+	- Simple models (e.g. linear regression) have high bias (strong assumptions) but low variance (they don't change much with new data)
+	- Complex Models (e.g. Deep Decision trees) have low bias (flexible enough to fit anything) but high variance (they fit the noise, making them very sensitive to training data)
+	- The goal of a good model is to find the "sweet spot" that balances the two
