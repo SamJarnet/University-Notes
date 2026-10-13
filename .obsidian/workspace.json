@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+                "file": "6 - Full Notes/Computer Vision/Edge Detection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 2"
+              "title": "Edge Detection"
             }
           }
         ]
@@ -184,24 +184,26 @@
   },
   "active": "685be2075ca38cd2",
   "lastOpenFiles": [
-    "6 - Full Notes/Foundation of Machine Learning/Logistic Regression.md",
-    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+    "2 - Source Material/Pasted image 20261013145945.png",
+    "2 - Source Material/Pasted image 20261013145910.png",
+    "2 - Source Material/Pasted image 20261013145732.png",
+    "2 - Source Material/Pasted image 20261013145720.png",
+    "2 - Source Material/Pasted image 20261013145719.png",
+    "2 - Source Material/Pasted image 20261013145614.png",
+    "2 - Source Material/Pasted image 20261013145228.png",
+    "2 - Source Material/Pasted image 20261013145101.png",
+    "2 - Source Material/Pasted image 20261013144743.png",
+    "2 - Source Material/Pasted image 20261013144556.png",
+    "2 - Source Material/Pasted image 20261013144512.png",
     "6 - Full Notes/Computer Vision/Point Operators.md",
-    "2 - Source Material/Pasted image 20261007172459.png",
-    "6 - Full Notes/Computer Vision/Image Sampling.md",
-    "6 - Full Notes/Computer Vision/Introduction.md",
+    "6 - Full Notes/Computer Vision/Edge Detection.md",
     "6 - Full Notes/Computer Vision/Eye and Human Vision.md",
-    "conflict-files-obsidian-git.md",
+    "6 - Full Notes/Computer Vision/Introduction.md",
+    "6 - Full Notes/Computer Vision/Image Sampling.md",
     "6 - Full Notes/Computer Vision/Image Formation.md",
-    "2 - Source Material/Pasted image 20261006124605.png",
-    "2 - Source Material/Pasted image 20261006094524.png",
-    "2 - Source Material/Pasted image 20261006094133.png",
-    "2 - Source Material/Pasted image 20261006094118.png",
-    "2 - Source Material/Pasted image 20261006094107.png",
-    "2 - Source Material/Pasted image 20261006093930.png",
-    "2 - Source Material/Pasted image 20261006093904.png",
-    "2 - Source Material/Pasted image 20261006093522.png",
-    "2 - Source Material/Pasted image 20261006093256.png",
+    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+    "6 - Full Notes/Foundation of Machine Learning/Logistic Regression.md",
+    "conflict-files-obsidian-git.md",
     "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
     "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
@@ -226,7 +228,6 @@
     "6 - Full Notes/Computer Systems II/FAT File System(s).md",
     "6 - Full Notes/Computer Systems II/From Source To Circuit.md",
     "6 - Full Notes/Algorithms/Queues.md",
-    "6 - Full Notes/Algorithms/Data Structures.md",
     "Untitled.canvas",
     "6 - Full Notes/Part III Individual Project",
     "6 - Full Notes/Formal Verification And Specification/Untitled"
