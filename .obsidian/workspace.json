@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a0005f65685c784d",
+        "id": "7520159deecceaa7",
         "type": "tabs",
         "children": [
           {
-            "id": "3a239ccb47c5c1ce",
+            "id": "685be2075ca38cd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Point Operators.md",
+                "file": "6 - Full Notes/Computer Vision/Point Operators.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Point Operators"
             }
-          },
-          {
-            "id": "480e93c0e56a45fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -57,7 +42,7 @@
               "state": {
                 "sortOrder": "byModifiedTime",
                 "autoReveal": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
@@ -130,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Full Notes/Computer Vision/Point Operators.md",
+                "file": "6 - Full Notes/Theory of Computing/Pushdown Automata.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Pushdown Automata"
             }
           },
           {
@@ -159,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Full Notes/Computer Vision/Point Operators.md",
+                "file": "Part III Individual Project/Simulation Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Simulation Notes"
             }
           },
           {
@@ -183,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,54 +182,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "480e93c0e56a45fd",
+  "active": "6c77aa7a7004db0e",
   "lastOpenFiles": [
-    "6 - Full Notes/Point Operators.md",
-    "conflict-files-obsidian-git.md",
-    "6 - Full Notes/Part III Individual Project/Paper Summaries.md",
-    "6 - Full Notes/Part III Individual Project/Lookup Guide.md",
     "6 - Full Notes/Computer Vision/Point Operators.md",
-    "6 - Full Notes/Computer Vision/Edge Detection.md",
-    "2 - Source Material/Pasted image 20261013145945.png",
-    "2 - Source Material/Pasted image 20261013145910.png",
-    "2 - Source Material/Pasted image 20261013145732.png",
-    "2 - Source Material/Pasted image 20261013145720.png",
-    "2 - Source Material/Pasted image 20261013145719.png",
-    "2 - Source Material/Pasted image 20261013145614.png",
-    "2 - Source Material/Pasted image 20261013145228.png",
-    "2 - Source Material/Pasted image 20261013145101.png",
-    "2 - Source Material/Pasted image 20261013144743.png",
-    "2 - Source Material/Pasted image 20261013144556.png",
-    "6 - Full Notes/Computer Vision/Group Operators.md",
+    "6 - Full Notes/Computer Vision/Point Operators.md",
+    "6 - Full Notes/Part III Individual Project/Paper Summaries.md",
     "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2 temp.md",
-    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
-    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+    "6 - Full Notes/Computer Vision/Group Operators.md",
+    "2 - Source Material/Pasted image 20261009130017.png",
+    "2 - Source Material/Pasted image 20261009125817.png",
+    "2 - Source Material/Pasted image 20261009125801.png",
+    "2 - Source Material/Pasted image 20261009125758.png",
+    "2 - Source Material/Pasted image 20261009125653.png",
+    "2 - Source Material/Pasted image 20261009114449.png",
+    "2 - Source Material/Pasted image 20261009114442.png",
+    "2 - Source Material/Pasted image 20261009114257.png",
+    "2 - Source Material/Pasted image 20261009114152.png",
+    "2 - Source Material/Pasted image 20261009114137.png",
+    "6 - Full Notes/Part III Individual Project/Lookup Guide.md",
+    "6 - Full Notes/Part III Individual Project/Unconfirmed 653659.crdownload",
     "6 - Full Notes/Foundation of Machine Learning/Logistic Regression.md",
+    "6 - Full Notes/Part III Individual Project/Unconfirmed 492648.crdownload",
+    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
-    "6 - Full Notes/Foundation of Machine Learning/Labs",
+    "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
+    "6 - Full Notes/Computer Vision/Edge Detection.md",
+    "6 - Full Notes/Computer Vision/Eye and Human Vision.md",
     "6 - Full Notes/Computer Vision/Introduction.md",
-    "3 - Tags/Year 3/Computer Vision.md",
-    "6 - Full Notes/Computer Systems I/CPU.md",
-    "6 - Full Notes/Formal Verification And Specification/Design By Contract & Hoare Logic.md",
-    "6 - Full Notes/Formal Verification And Specification/Automata-Based Verification for LTL.md",
-    "6 - Full Notes/Formal Verification And Specification/SPIN Verification.md",
-    "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
-    "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
     "6 - Full Notes/Computer Vision/Image Sampling.md",
     "6 - Full Notes/Computer Vision/Image Formation.md",
-    "5 - Template/Full Note.md",
-    "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
-    "6 - Full Notes/Computer Vision/Eye and Human Vision.md",
+    "conflict-files-obsidian-git.md",
+    "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
+    "6 - Full Notes/Foundation of Machine Learning/Labs",
+    "3 - Tags/Year 3/Computer Vision.md",
+    "6 - Full Notes/Programming II Logbook.md",
     "6 - Full Notes/Computer Vision",
-    "6 - Full Notes/Computer Vision.md",
-    "6 - Full Notes/Real-Time Computing and Embedded Systems",
-    "3 - Tags/Year 3",
-    "6 - Full Notes/Fundamentals of Machine Learning/Untitled",
-    "6 - Full Notes/Foundation of Machine Learning",
-    "Untitled.canvas",
-    "6 - Full Notes/Part III Individual Project",
-    "6 - Full Notes/Formal Verification And Specification/Untitled",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
+    "5 - Template/Full Note.md",
     "Untitled.base",
-    "6 - Full Notes/Untitled 1"
+    "6 - Full Notes/Fundamentals of Machine Learning/Introduction.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems",
+    "6 - Full Notes/Foundation of Machine Learning",
+    "3 - Tags/Year 3/Fundamentals of Machine Learning.md",
+    "3 - Tags/Year 3",
+    "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
+    "6 - Full Notes/Fundamentals of Machine Learning/Untitled",
+    "6 - Full Notes/Fundamentals of Machine Learning",
+    "Part III Individual Project/Panayiotis Danassis.md",
+    "Untitled.canvas"
   ]
 }
