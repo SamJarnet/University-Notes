@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Full Notes/Foundation of Machine Learning/Classification - Nonparametric Methods.md",
+                "file": "6 - Full Notes/Foundation of Machine Learning/Ensemble Methods.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Classification - Nonparametric Methods"
+              "title": "Ensemble Methods"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 386.5,
-    "collapsed": true
+    "width": 386.5
   },
   "right": {
     "id": "d9ba28a126a9fc24",
@@ -185,23 +184,27 @@
   },
   "active": "3a239ccb47c5c1ce",
   "lastOpenFiles": [
-    "2 - Source Material/Pasted image 20261018220953.png",
-    "2 - Source Material/Pasted image 20261018220345.png",
-    "2 - Source Material/Pasted image 20261018220034.png",
-    "2 - Source Material/Pasted image 20261018215416.png",
-    "2 - Source Material/Pasted image 20261018215257.png",
-    "2 - Source Material/Pasted image 20261018152201.png",
-    "2 - Source Material/Pasted image 20261018151920.png",
+    "2 - Source Material/Pasted image 20261020122816.png",
+    "6 - Full Notes/Foundation of Machine Learning/Classification - Nonparametric Methods.md",
+    "6 - Full Notes/Foundation of Machine Learning/Ensemble Methods.md",
+    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+    "6 - Full Notes/Real-Time Computing and Embedded Systems/Something.md",
+    "6 - Full Notes/Computer Vision/Finding Shapes.md",
+    "2 - Source Material/Pasted image 20261020093902.png",
+    "2 - Source Material/Pasted image 20261020093900.png",
+    "2 - Source Material/Pasted image 20261020093818.png",
+    "2 - Source Material/Pasted image 20261020093103.png",
+    "2 - Source Material/Pasted image 20261020092658.png",
+    "2 - Source Material/Pasted image 20261020092612.png",
+    "2 - Source Material/Pasted image 20261020092516.png",
+    "2 - Source Material/Pasted image 20261020092403.png",
+    "2 - Source Material/Pasted image 20261020092127.png",
+    "2 - Source Material/Pasted image 20261020092125 1.png",
     "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2 temp.md",
     "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
     "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
     "6 - Full Notes/Computer Vision/Introduction.md",
-    "6 - Full Notes/Foundation of Machine Learning/Classification - Nonparametric Methods.md",
     "6 - Full Notes/Computer Vision/Edge Detection.md",
-    "2 - Source Material/Pasted image 20261016154056.png",
-    "2 - Source Material/Pasted image 20261016113910.png",
-    "2 - Source Material/Pasted image 20261016113816.png",
-    "2 - Source Material/Pasted image 20261016113704.png",
     "6 - Full Notes/Part III Individual Project/Paper Summaries.md",
     "6 - Full Notes/Part III Individual Project/Lookup Guide.md",
     "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
@@ -210,7 +213,6 @@
     "6 - Full Notes/Computer Vision/Group Operators.md",
     "6 - Full Notes/Point Operators.md",
     "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
-    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
     "6 - Full Notes/Foundation of Machine Learning/Logistic Regression.md",
     "6 - Full Notes/Foundation of Machine Learning/Labs",
     "3 - Tags/Year 3/Computer Vision.md",
@@ -219,9 +221,6 @@
     "6 - Full Notes/Formal Verification And Specification/Automata-Based Verification for LTL.md",
     "6 - Full Notes/Formal Verification And Specification/SPIN Verification.md",
     "6 - Full Notes/Real-Time Computing and Embedded Systems/Real-Time Embedded Systems.md",
-    "6 - Full Notes/Real-Time Computing and Embedded Systems/Embedded Architectures.md",
-    "6 - Full Notes/Computer Vision/Image Sampling.md",
-    "6 - Full Notes/Computer Vision/Image Formation.md",
     "6 - Full Notes/Computer Vision",
     "6 - Full Notes/Real-Time Computing and Embedded Systems",
     "3 - Tags/Year 3",
