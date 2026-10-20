@@ -20,8 +20,23 @@
               "icon": "diff",
               "title": "Diff: workspace.json  (Working Tree)"
             }
+          },
+          {
+            "id": "6af1c8779d320b4a",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,9 +197,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "685be2075ca38cd2",
+  "active": "6af1c8779d320b4a",
   "lastOpenFiles": [
+    "6 - Full Notes/Foundation of Machine Learning/Classification - Nonparametric Methods.md",
+    "conflict-files-obsidian-git.md",
     "6 - Full Notes/Foundation of Machine Learning/Logistic Regression.md",
+    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
+    "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
+    "2 - Source Material/Pasted image 20261018220953.png",
+    "2 - Source Material/Pasted image 20261018220345.png",
+    "2 - Source Material/Pasted image 20261018220034.png",
+    "2 - Source Material/Pasted image 20261018215416.png",
+    "2 - Source Material/Pasted image 20261018215257.png",
+    "2 - Source Material/Pasted image 20261018152201.png",
+    "2 - Source Material/Pasted image 20261018151920.png",
+    "2 - Source Material/Pasted image 20261016154056.png",
+    "2 - Source Material/Pasted image 20261016113910.png",
+    "2 - Source Material/Pasted image 20261016113816.png",
     "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2.md",
     "6 - Full Notes/Foundation of Machine Learning/Labs/Lab 2 temp.md",
     "3 - Tags/Year 2/Formal Specification and Verification.md",
@@ -192,27 +221,14 @@
     "6 - Full Notes/Computer Vision/Point Operators.md",
     "6 - Full Notes/Part III Individual Project/Paper Summaries.md",
     "6 - Full Notes/Computer Vision/Group Operators.md",
-    "2 - Source Material/Pasted image 20261009130017.png",
-    "2 - Source Material/Pasted image 20261009125817.png",
-    "2 - Source Material/Pasted image 20261009125801.png",
-    "2 - Source Material/Pasted image 20261009125758.png",
-    "2 - Source Material/Pasted image 20261009125653.png",
-    "2 - Source Material/Pasted image 20261009114449.png",
-    "2 - Source Material/Pasted image 20261009114442.png",
-    "2 - Source Material/Pasted image 20261009114257.png",
-    "2 - Source Material/Pasted image 20261009114152.png",
-    "2 - Source Material/Pasted image 20261009114137.png",
     "6 - Full Notes/Part III Individual Project/Lookup Guide.md",
     "6 - Full Notes/Part III Individual Project/Unconfirmed 653659.crdownload",
     "6 - Full Notes/Part III Individual Project/Unconfirmed 492648.crdownload",
-    "6 - Full Notes/Foundation of Machine Learning/MLE & Linear Regression.md",
-    "6 - Full Notes/Foundation of Machine Learning/Basic Maths.md",
     "6 - Full Notes/Computer Vision/Edge Detection.md",
     "6 - Full Notes/Computer Vision/Eye and Human Vision.md",
     "6 - Full Notes/Computer Vision/Introduction.md",
     "6 - Full Notes/Computer Vision/Image Sampling.md",
     "6 - Full Notes/Computer Vision/Image Formation.md",
-    "conflict-files-obsidian-git.md",
     "6 - Full Notes/Foundation of Machine Learning/Introduction.md",
     "6 - Full Notes/Foundation of Machine Learning/Labs",
     "3 - Tags/Year 3/Computer Vision.md",
@@ -227,7 +243,6 @@
     "6 - Full Notes/Foundation of Machine Learning",
     "3 - Tags/Year 3/Fundamentals of Machine Learning.md",
     "3 - Tags/Year 3",
-    "6 - Full Notes/Part III Individual Project/Simulation Notes.md",
     "6 - Full Notes/Fundamentals of Machine Learning/Untitled",
     "6 - Full Notes/Fundamentals of Machine Learning",
     "Untitled.canvas"

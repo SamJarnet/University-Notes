@@ -93,3 +93,46 @@ Tags:
 	- s =Sobel_templates (5)
 	- s(:, :, 1) = 
 		![[Pasted image 20261013145945.png]]
+
+- Sobel is a good basic operator
+	- Blurred Edges
+	- Noisy Edges
+
+#### Canny Edge Detection Operator
+- Formulated with three objectives:
+	- Optimal detection with no spurious responses;
+	- Good localisation with minimal distance between detected and true edge position
+	- Single response to eliminate multiple responses to a single edge
+- Approximation:
+	- Use Gaussian Smoothing;
+	- Use the Sobel operator;
+	- Use non-maximum suppression;
+		- Threshold with hysteresis to connect edge points
+	
+	![[Pasted image 20261016111048.png]]
+- Canny gives thin edges in the right place, but is more complex 
+
+#### Interpolation in Non-Maximum Suppression
+- Need to use points which are not on the image grid
+- Use linear interpolation
+	![[Pasted image 20261016111400.png]]
+- Mark the point $P_{x,y}$ as a maximum if its gradient magnitude is larger than both at $M_1$ and $M_2$; otherwise set it to $0$.
+
+#### Hysteresis Thresholding Transfer Function
+![[Pasted image 20261016111637.png]]
+
+#### Action of non-maximum suppression and hysteresis thresholding
+![[Pasted image 20261016113704.png]]
+
+#### Comparing Hysteresis Thresholding with Uniform Thresholding
+- Hysteresis thresholding gives all points > upper threshold plus any connected points > lower threshold
+	![[Pasted image 20261016113816.png]]
+- Canny looks better then Sobel as it has thinner lines
+
+#### First and Second Order Edge Detection
+![[Pasted image 20261016113910.png]]
+
+#### Edge Detection via the Laplacian Operator
+![[Pasted image 20261016154056.png]]
+
+#### 
