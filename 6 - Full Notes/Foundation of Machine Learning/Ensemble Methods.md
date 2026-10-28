@@ -26,15 +26,18 @@ Tags: [[Foundation of Machine Learning]]
 - It converts a set of "weak learners" (models only slightly better than random guessing) into a  single "strong learner"
 
 #### Boosting vs Random Forest
-- Goal: Reduce Variance
-
-|
-|
-|
-|
-|
-|
-|
+- Random Forest (Bagging)
+	- Goal: Reduce Variance
+	- Trains models in parallel
+	- Base learners are complex (deep trees)
+	- Each model is independent
+	- Final prediction is a simple average/vote
+- Boosting
+	- Goal: Reduce Bias
+	- Trains model sequentially
+	- Base learners are simple (weak learners)
+	- Each model depends on the previous
+	- Final prediction is a weighted average 
 
 
 #### AdaBoost: 

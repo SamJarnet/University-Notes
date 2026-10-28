@@ -2,7 +2,7 @@
 
 Status:
 
-Tags: 
+Tags: [[Computer Vision]]
 
 
 # Edge Detection

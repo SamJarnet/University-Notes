@@ -131,3 +131,53 @@ Tags: [[Foundation of Machine Learning]]
 		- Let the sub-ensemble of OOB trees make a prediction for point $i$ 
 	- 2. The OOB error is the total number of incorrect predictions made this way, divided by $N$.
 - A key advantage: OOB error is a nearly unbiased estimate of the test error once the forest has enough trees. With only a few trees it runs high, since each point is predicted by just $\approx 37$% of them.
+
+#### Feature Importance: Attribution
+- Attribution asks how much each input feature contributed to a prediction.
+	- Linear models: the weights are the attribution 
+		- $∂yˆ/∂x_j = w_j$ exactly, so $|w_j|$ ranks the features
+	- Black boxes: use the local linear approximation
+		- $f (x + δ) ≈ f (x) + ∇f (x) ^T δ$ :
+			- $a_j(x) = \frac{∂f (x)} {∂x_j}$ or $x_j \frac {∂f (x)} {∂x_j}$
+		- How far the prediction moves when $x_j$ is nudged. For linear $f$ this returns $w_j$ - but now it is one number per prediction, not per model.
+- A forest is piecewise constant, so $∇_x f = 0$ almost everywhere - hence the two methods that follow.
+
+#### Feature Importance: Peeking inside the "Black Box"
+- Random Forests are powerful, but can seem like a black box. 
+- Feature importance helps us understand which features are most influential for making predictions.
+	- Which features are most predictive
+	- Can we simplify our model by using fewer features?
+- Two common methods for calculating feature importance in tree ensembles are:
+	- Mean Decrease in Inpurity (MDI)
+	- Permutation Importance (or Mean Decrease in Accuracy)
+
+#### Mean Decrease in Impurity (MDI)
+- The idea:
+	- A feature's importance is measured by how much it helps to "purify" the nodes in the trees. This is purely based on impurity metrics (Gini, Entropy) we use to build the trees.
+		- 1. For a single tree: The importance of a feature is the sum of the impurity reductions at all nodes where that feature was used to split, each weighted by the fraction of training samples reaching that node.
+		- 2. For the forest: The importance score is the average of the feature's importance scores across all trees in the forest.
+- Pros:
+	- Fast to compute as it's a by-product of the training process.
+- Cons:
+	- Tends to be biased towards features with high cardinality (many unique values)
+	- Computed from the training data, so it can credit features that do not help on unseen data - even pure noise
+
+#### Permutation Importance
+- The idea:
+	- The importance of a feature is measured by how much the model's performance drops when that feature's values are randomly shuffled. If a feature is important, breaking its link to the target should hurt the score.
+		- 1. Train the Random Forest and calculate a baslined score (e.g. accuracy on the OOB set)
+		- 2. For each feature $j$:
+			- Randomly shuffle the values in column $j$ of the OOB data.
+			- Make predictions with the shuffled data and calculate the new, lower score.
+			- The importance of a feature $j$ is the drop in score (original score - shuffled score)
+		- 3. Rank features by their importance scores.
+- Pros:
+	- More reliable and less biased than MDI
+	- Can be applied to any fitted model, not just tree-based ones
+- Cons:
+	- Slower to compute is it requires re-evaluating the model for each feature
+
+#### Visualising Feature Importance
+- Typically a ranked list of features, often visualised as a bar chart.
+	![[Pasted image 20261021114934.png]]
+- This allows us to quickly identify the most influential features in the model's decisions.

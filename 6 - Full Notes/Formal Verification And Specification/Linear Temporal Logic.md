@@ -2,7 +2,7 @@
 
 Status:
 
-Tags: 
+Tags: [[Theory of Computing]]
 
 
 # Linear Temporal Logic
