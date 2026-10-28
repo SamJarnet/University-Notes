@@ -33,7 +33,17 @@ Tags:
 	- Scalability: P3O is naturally scalable to multiple constraints or agents without increasing complexity.
 
 #### P30 Example for Satellites (Autonomous spacecraft collision avoidance with a variable number of space debris based on safe reinforcement learning)
-- 
+- Due to the advantages of LSTM networks in processing time series data, it has been widely applied to collision avoidance problems with uncertainty, partial observability and strong temporal sequences.
+- Collision avoidance has been done with a long safe distance by incorporating the LSTM network.
+- These methods are usually not applicable with a variable number of targets.
+- This method proposes a combination of the LSTM and P3O.
+	- Aims to achieve successful collision avoidance with a variable number of space debris while satisfying multiple safety constrains of the spacecraft with low energy consumption.
+- Steps:
+	- Using LSTM networks for adaptive feature extraction that allows the algorithm to avoid a variable number of space debris
+	- The P30 Algorithm is used to optimise the spacecraft collision avoidance policy while reducing the spacecraft's violation of safety constraints.
+	- A simulation environment with multiple space debris is established to train and evaluate the autonomous collision avoidance capability of the proposed method.
+		- The performance of the method in terms of scalability, energy consumption, collision probability and constraint satisfaction is verified by Monte Carlo tests
+		- This could be very useful for my analysis
 
 
 
