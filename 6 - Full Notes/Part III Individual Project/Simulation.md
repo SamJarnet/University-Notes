@@ -21,3 +21,8 @@ $u_y$ Relative position offset along the $y$-axis in the encounter plane
 $\sigma_x$ Position uncertainty standard deviation along the $x$-axis
 $\sigma_y$ Position uncertainty standard deviation along the $y$-axis
 $r_A$Combined collision radius of the two objects
+
+file:///home/samuel/Documents/Portfolio/ICAART_2025___Col__Avoid____Ret__Man__Paper1.pdf
+
+# for time of closest approach and distance
+https://wcl.cs.rpi.edu/pilots/library/papers/collision/coordination_nasa.pdf
